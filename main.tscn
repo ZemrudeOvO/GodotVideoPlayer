@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=3 uid="uid://db2p1abinokg"]
+
+[ext_resource type="VideoStream" path="res://videos/output.ogv" id="1_bqxlk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1088.0
+scale = Vector2(0.666, 0.666)
+stream = ExtResource("1_bqxlk")
+autoplay = true
+
+[node name="UI" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 165.0
+offset_bottom = 475.0
+theme_override_constants/separation = 10
+
+[node name="stream_01" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "stream_01"
+
+[node name="stream_02" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "stream_02"
+
+[node name="stream_03" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "stream_03"
+
+[node name="stream_04" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "stream_04"
+
+[node name="stream_05" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "stream_05"
+
+[node name="stream_06" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "stream_06"
+
+[node name="stream_07" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "stream_07"
+
+[node name="stream_08" type="Button" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "stream_08"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -73.0
+offset_right = 319.0
+offset_bottom = -16.0
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="Play_Pause" type="Button" parent="UI/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "播放"
+
+[node name="FullScreen" type="Button" parent="UI/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "全屏"
+
+[node name="UiTweenDisplay" type="Node" parent="."]
+
+[node name="GetVideoFiles" type="Node" parent="."]
