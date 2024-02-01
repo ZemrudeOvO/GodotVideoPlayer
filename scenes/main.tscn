@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://db2p1abinokg"]
+[gd_scene load_steps=3 format=3 uid="uid://db2p1abinokg"]
 
-[ext_resource type="VideoStream" path="res://videos/output.ogv" id="1_bqxlk"]
+[ext_resource type="VideoStream" path="res://videos/output.ogv" id="1_bp4ta"]
+[ext_resource type="Script" path="res://scripts/GetVideoFiles.cs" id="2_kdn0e"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,8 +17,7 @@ layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1088.0
 scale = Vector2(0.666, 0.666)
-stream = ExtResource("1_bqxlk")
-autoplay = true
+stream = ExtResource("1_bp4ta")
 
 [node name="UI" type="Control" parent="."]
 anchors_preset = 0
@@ -107,3 +107,4 @@ text = "全屏"
 [node name="UiTweenDisplay" type="Node" parent="."]
 
 [node name="GetVideoFiles" type="Node" parent="."]
+script = ExtResource("2_kdn0e")
