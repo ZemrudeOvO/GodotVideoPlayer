@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://db2p1abinokg"]
+[gd_scene load_steps=4 format=3 uid="uid://db2p1abinokg"]
 
 [ext_resource type="VideoStream" path="res://videos/01.ogv" id="1_bp4ta"]
 [ext_resource type="Script" path="res://scripts/GetVideoFiles.cs" id="2_kdn0e"]
+[ext_resource type="PackedScene" uid="uid://bngtg7c6bhk8e" path="res://scenes/volume_random.tscn" id="3_xlvq8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -109,24 +110,6 @@ text = "全屏"
 [node name="GetVideoFiles" type="Node" parent="."]
 script = ExtResource("2_kdn0e")
 
-[node name="Window" type="AcceptDialog" parent="."]
-disable_3d = true
-position = Vector2i(0, 36)
-size = Vector2i(300, 100)
-visible = true
+[node name="DisplayVoluneController" type="Node" parent="."]
 
-[node name="Control" type="Control" parent="Window"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 292.0
-offset_bottom = 51.0
-
-[node name="CenterContainer" type="CenterContainer" parent="Window/Control"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="HSlider" type="HSlider" parent="Window/Control/CenterContainer"]
-layout_mode = 2
-ticks_on_borders = true
+[node name="Window" parent="DisplayVoluneController" instance=ExtResource("3_xlvq8")]
