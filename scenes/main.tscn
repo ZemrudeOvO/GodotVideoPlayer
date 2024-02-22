@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://db2p1abinokg"]
+[gd_scene load_steps=5 format=3 uid="uid://db2p1abinokg"]
 
 [ext_resource type="VideoStream" path="res://videos/01.ogv" id="1_bp4ta"]
-[ext_resource type="Script" path="res://scripts/GetVideoFiles.cs" id="2_kdn0e"]
+[ext_resource type="Script" path="res://scripts/main/GetVideoFiles.cs" id="2_kdn0e"]
 [ext_resource type="PackedScene" uid="uid://bngtg7c6bhk8e" path="res://scenes/volume_random.tscn" id="3_xlvq8"]
+[ext_resource type="Script" path="res://scripts/Volume.cs" id="4_ncy16"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -34,52 +35,10 @@ offset_bottom = 475.0
 theme_override_constants/separation = 10
 
 [node name="stream_01" type="Button" parent="UI/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_font_sizes/font_size = 24
 text = "stream_01"
-
-[node name="stream_02" type="Button" parent="UI/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "stream_02"
-
-[node name="stream_03" type="Button" parent="UI/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "stream_03"
-
-[node name="stream_04" type="Button" parent="UI/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "stream_04"
-
-[node name="stream_05" type="Button" parent="UI/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "stream_05"
-
-[node name="stream_06" type="Button" parent="UI/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "stream_06"
-
-[node name="stream_07" type="Button" parent="UI/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "stream_07"
-
-[node name="stream_08" type="Button" parent="UI/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "stream_08"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI"]
 layout_mode = 1
@@ -113,3 +72,6 @@ script = ExtResource("2_kdn0e")
 [node name="DisplayVoluneController" type="Node" parent="."]
 
 [node name="Window" parent="DisplayVoluneController" instance=ExtResource("3_xlvq8")]
+
+[node name="Volume" type="Node" parent="."]
+script = ExtResource("4_ncy16")
